@@ -6,7 +6,7 @@ It's built with React, Redux, React Router, & Redux Thunk.
 
 This app is the second of three projects required for [Udacity's React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
 
-- **Live Demo:** [Click Here for the demo]()
+- **Live Demo:** [Click Here for the demo](https://udacity-would-you-rather.netlify.app)
 
 ## Installation
 
