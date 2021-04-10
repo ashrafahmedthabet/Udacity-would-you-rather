@@ -46,7 +46,6 @@ function mapStateToProps({ users }) {
     }))
     .sort((a, b) => a.total - b.total)
     .reverse()
-    .slice(0, 3);
   return {
     leaderboardData,
   };

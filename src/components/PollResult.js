@@ -40,12 +40,12 @@ function PollResult(props) {
   }
   return (
     <Fragment>
-      <h3>
+      <Header as="h3">
         Results:
         <Header.Subheader style={{ fontWeight: "bold" }}>
           Would you rather
         </Header.Subheader>
-      </h3>
+      </Header>
       <Segment
         color={option1.color}
         style={{ backgroundColor: `${option1.bgColor}` }}
@@ -54,8 +54,12 @@ function PollResult(props) {
         <p style={{ fontWeight: "bold" }}>{question.optionOne.text}</p>
         <Progress
           percent={((optionOneVotes / votesTotal) * 100).toFixed(2)}
+          progress
           color={option1.color}
-        />
+          className="progress-ui"
+        >
+          {optionOneVotes} out of {votesTotal} votes
+        </Progress>
       </Segment>
       <Segment
         color={option2.color}
@@ -66,10 +70,13 @@ function PollResult(props) {
         <p style={{ fontWeight: "bold" }}>{question.optionTwo.text}</p>
         <Progress
           percent={((optionTwoVotes / votesTotal) * 100).toFixed(2)}
+          progress
           color={option2.color}
-        />
+          className="progress-ui"
+        >
+          {optionTwoVotes} out of {votesTotal} votes
+        </Progress>
       </Segment>
-
       <Button size="tiny" floated="right" onClick={handleClick}>
         Back
       </Button>
